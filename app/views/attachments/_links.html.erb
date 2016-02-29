@@ -31,7 +31,7 @@
       <div>
         <%=
           link_to image_tag(url_for(:controller => 'attachments', :action => 'thumbnail', :id => attachment)),
-          {:controller => 'attachments', :action => 'show', :id => attachment, :filename => attachment.filename},
+          {:controller => 'attachments', :action => 'download', :id => attachment, :filename => attachment.filename},
           :class => 'lightbox', :rel => 'attachments', :title => "#{attachment.filename}#{ ('-' + attachment.description) unless attachment.description.blank? }"
         %>
       </div>
@@ -43,8 +43,8 @@
 	<% unless images.empty? %>
 	  <div class='images'>
 	    <% images.each do |attachment| %>
-	      <%= link_to image_tag(url_for({:controller => 'attachments', :action => 'show', :id => attachment, :filename => attachment.filename }), :width => '180'),
-	      {:controller => 'attachments', :action => 'show', :id => attachment, :filename => attachment.filename }, :class => 'lightbox', :rel => 'attachments', :title => "#{attachment.filename}#{ ('-' + attachment.description) unless attachment.description.blank? }" %>
+	      <%= link_to image_tag(url_for({:controller => 'attachments', :action => 'download', :id => attachment, :filename => attachment.filename }), :width => '180'),
+	      {:controller => 'attachments', :action => 'download', :id => attachment, :filename => attachment.filename }, :class => 'lightbox', :rel => 'attachments', :title => "#{attachment.filename}#{ ('-' + attachment.description) unless attachment.description.blank? }" %>
 	    <% end -%>
 	  </div>
 	<% end -%>
