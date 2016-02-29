@@ -1,7 +1,7 @@
 <div class="attachments">
 <% for attachment in attachments %>
 <p><%= link_to_attachment attachment, :class => 'icon icon-attachment', :download => true -%>
-  <% if attachment.is_text? %>
+  <% if attachment.is_text? || attachment.try(:is_image?) %>
     <%= link_to image_tag('magnifier.png'),
                 :controller => 'attachments', :action => 'show',
                 :id => attachment, :filename => attachment.filename %>
