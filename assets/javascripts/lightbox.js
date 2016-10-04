@@ -40,21 +40,21 @@ $(document).ready(function() {
 			closeSpeed		: 150
 		});
 
-    $("div.attachments a.pdf," +
-      "div.journal ul.details a[href$='.pdf']," +
-      "div.journal ul.details a[href$='.PDF']," +
-      "div.journal div.thumbnails a[href$='.pdf']," +
-      "div.journal div.thumbnails a[href$='.PDF']").fancybox({
-      type          : 'iframe',
-			prevEffect		: 'none',
-			nextEffect		: 'none',
-			openSpeed		: 300,
-			closeSpeed		: 150,
-			width			: '90%',
-			height			: '90%',
-			autoSize		: true,
-			iframe : {
-				preload: false
-			}
-		});
+//    $("div.attachments a.pdf," +
+//      "div.journal ul.details a[href$='.pdf']," +
+//      "div.journal ul.details a[href$='.PDF']," +
+//      "div.journal div.thumbnails a[href$='.pdf']," +
+//      "div.journal div.thumbnails a[href$='.PDF']").fancybox({
+//      type          : 'iframe',
+//			prevEffect		: 'none',
+//			nextEffect		: 'none',
+//			openSpeed		: 300,
+//			closeSpeed		: 150,
+//			width			: '90%',
+//			height			: '90%',
+//			autoSize		: true,
+//			iframe : {
+//				preload: false
+//			}
+//		});
 });
