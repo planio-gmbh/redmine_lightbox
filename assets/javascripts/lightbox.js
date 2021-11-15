@@ -69,6 +69,9 @@ $(document).ready(function() {
 
   // #76 support for issue list attachment column
   $("table.list.issues td.attachments a").each(function(i, obj) {
+    if (this.classList.contains('icon-only')){
+      return;
+    }
     var href = $(this).attr('href');
     var filename = $(this).text();
     // Also support PDF preview in lightbox
